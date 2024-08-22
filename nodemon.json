@@ -1,0 +1,4 @@
+{
+  "watch": ["dist"],
+  "exec": "ts-node ./dist/index.js"
+}

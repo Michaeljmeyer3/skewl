@@ -1,0 +1,22 @@
+{
+  "name": "skewl",
+  "version": "1.0.0",
+  "description": "npm create vite@latest my-vite-project --template vanilla-ts",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k \"tsc -w\" \"nodemon ./dist/index.js\"",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.4.0",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}

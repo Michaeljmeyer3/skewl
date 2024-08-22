@@ -1,0 +1,66 @@
+const baseGrid = [
+  ["1", "1", "1", "1", "0"],
+  ["1", "1", "0", "1", "0"],
+  ["1", "1", "0", "0", "0"],
+  ["0", "0", "0", "0", "0"]
+]
+
+const grid2 = [
+  ["1", "1", "0", "0", "0"],
+  ["1", "1", "0", "0", "0"],
+  ["0", "0", "1", "0", "0"],
+  ["0", "0", "0", "1", "1"]
+]
+
+const DepthFirstSearchF = () => {
+  const visited: string[][] = [];
+
+  // dfsHealper(src, visited);
+
+  function dfsHelper(src: number, visited: boolean[]) {
+    if (visited[src])
+      return
+    else {
+      visited[src] = true
+      console.log(`${(visited[src])} = visited`)
+    }
+
+    for (let i = 0; i < grid2[src].length; i++) {
+      if (grid2[src][i] === "1") {
+        dfsHelper(i, visited);
+      }
+    }
+    return
+  }
+}
+
+
+DepthFirstSearchF()
+
+const DepthFirstSearch = () => {
+  // const stack = [[i, j]];
+  // let islandSize = 0;
+
+  // while (stack.length)
+}
+
+export default function (grid?: string[][]) {
+
+  grid = grid || baseGrid;
+
+  const checkedNodes = grid.map((row: string[]) => row.map(cell => false));
+  let islandCount = 0;
+
+  for (let i = 0; i < grid.length; i++) {
+    const landMap = {
+
+    }
+    for (let i2 = 0; i2 < grid[i].length;) {
+      if (grid[i][i2] === "1") {
+        checkedNodes[i][i2] = true;
+      } else {
+        checkedNodes[i][i2] = false;
+      }
+    }
+  }
+}

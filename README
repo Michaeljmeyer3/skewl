@@ -1,0 +1,3 @@
+# Project Setup
+npm create vite@latest my-vite-project --template vanilla-ts
+
